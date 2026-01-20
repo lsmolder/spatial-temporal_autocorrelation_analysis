@@ -67,11 +67,15 @@ def main():
     parser.add_argument("--root_dir", default=".", help="Root directory containing conf_correction_out and analysis_out_fcmatrix")
     parser.add_argument("--atlas", required=True, help="Path to the Atlas NIfTI file")
     parser.add_argument("--output_dir", required=True, help="Directory to save aggregated results")
+    parser.add_argument("--timeseries", default=None, help="Path to timeseries directory (overrides default path within root_dir)")
     
     args = parser.parse_args()
     
     # Define Input Roots
-    ts_root = os.path.join(args.root_dir, 'conf_correction_out', 'confound_correction_datasink', 'cleaned_timeseries')
+    if args.timeseries:
+        ts_root = args.timeseries
+    else:
+        ts_root = os.path.join(args.root_dir, 'conf_correction_out', 'confound_correction_datasink', 'cleaned_timeseries')
     fc_root = os.path.join(args.root_dir, 'analysis_out_fcmatrix')
     
     if not os.path.exists(ts_root):
