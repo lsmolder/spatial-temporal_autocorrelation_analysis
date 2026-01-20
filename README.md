@@ -41,10 +41,11 @@ The script looks for data in the following locations relative to `--root_dir`:
 It automatically pairs files based on Subject, Session, and Run IDs (e.g., `sub-01`, `ses-01`, `run-1`), handling variations in folder naming (like `dir-AP` vs `dir-PA`).
 
 #### Arguments
-- `--root_dir`: The root folder containing the `conf_correction_out` and `analysis_out_fcmatrix` directories. Defaults to the current directory (`.`).
+- `--root_dir`: The root folder containing the `conf_correction_out` and `analysis_out_fcmatrix` directories. This is used as the base path for finding data when `--timeseries` or `--fc_matrix` are not explicitly specified. Defaults to the current directory (`.`).
 - `--atlas`: Path to the **common** NIfTI atlas file used for all subjects.
 - `--output_dir`: Directory where the master summary and individual results will be saved.
 - `--timeseries`: (Optional) Path to timeseries directory. If not provided, defaults to `<root_dir>/conf_correction_out/confound_correction_datasink/cleaned_timeseries/`.
+- `--fc_matrix`: (Optional) Path to FC matrix directory. If not provided, defaults to `<root_dir>/analysis_out_fcmatrix`.
 
 #### Batch Outputs
 1.  **`all_subjects_autocorrelation.csv`**: A master CSV containing results for all scans.

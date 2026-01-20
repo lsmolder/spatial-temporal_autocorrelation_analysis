@@ -64,16 +64,17 @@ def find_matching_fc_file(base_fc_dir, sub, ses, run):
 
 def main():
     parser = argparse.ArgumentParser(description="Batch Process TA and SA for Multiple Subjects")
-    parser.add_argument("--root_dir", default=".", help="Root directory containing conf_correction_out and analysis_out_fcmatrix")
+    parser.add_argument("--root_dir", default=".", help="Root directory containing conf_correction_out and analysis_out_fcmatrix subdirectories (used as base path when --timeseries or --fc_matrix are not specified)")
     parser.add_argument("--atlas", required=True, help="Path to the Atlas NIfTI file")
     parser.add_argument("--output_dir", required=True, help="Directory to save aggregated results")
     parser.add_argument("--timeseries", default=None, help="Path to timeseries directory (overrides default path within root_dir)")
+    parser.add_argument("--fc_matrix", default=None, help="Path to FC matrix directory (overrides default path within root_dir)")
     
     args = parser.parse_args()
     
     # Define Input Roots
     ts_root = args.timeseries or os.path.join(args.root_dir, 'conf_correction_out', 'confound_correction_datasink', 'cleaned_timeseries')
-    fc_root = os.path.join(args.root_dir, 'analysis_out_fcmatrix')
+    fc_root = args.fc_matrix or os.path.join(args.root_dir, 'analysis_out_fcmatrix')
     
     if not os.path.exists(ts_root):
         print(f"Error: Timeseries directory not found at: {ts_root}")
