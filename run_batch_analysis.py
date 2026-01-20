@@ -72,10 +72,7 @@ def main():
     args = parser.parse_args()
     
     # Define Input Roots
-    if args.timeseries:
-        ts_root = args.timeseries
-    else:
-        ts_root = os.path.join(args.root_dir, 'conf_correction_out', 'confound_correction_datasink', 'cleaned_timeseries')
+    ts_root = args.timeseries or os.path.join(args.root_dir, 'conf_correction_out', 'confound_correction_datasink', 'cleaned_timeseries')
     fc_root = os.path.join(args.root_dir, 'analysis_out_fcmatrix')
     
     if not os.path.exists(ts_root):
