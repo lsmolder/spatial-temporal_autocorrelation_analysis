@@ -121,7 +121,9 @@ def main():
         if direct_csv:
             # Extract BIDS info from the CSV filename
             csv_basename = os.path.basename(direct_csv)
-            sub, ses, run = parse_bids_from_folder(csv_basename)
+            # Remove .csv extension before parsing to avoid interfering with regex
+            csv_name = os.path.splitext(csv_basename)[0]
+            sub, ses, run = parse_bids_from_folder(csv_name)
             print(f"\nProcessing: {sub} | {ses} | {run}")
             ts_path = direct_csv
         else:
