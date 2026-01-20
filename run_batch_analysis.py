@@ -100,26 +100,44 @@ def main():
         print(f"Error loading atlas: {e}")
         sys.exit(1)
         
-    # 2. Find Timeseries Folders
+    # 2. Find Timeseries Files
     print(f"\nScanning for subjects in {ts_root}...")
-    # The structure is .../cleaned_timeseries/_split_name_.../*.csv
-    ts_folders = [d for d in os.listdir(ts_root) if os.path.isdir(os.path.join(ts_root, d)) and d.startswith('_split_name_')]
     
-    print(f"Found {len(ts_folders)} potential scans.")
+    # Check if the directory contains CSV files directly (new behavior)
+    direct_csv_files = glob.glob(os.path.join(ts_root, '*.csv'))
     
-    for folder in ts_folders:
-        sub, ses, run = parse_bids_from_folder(folder)
-        print(f"\nProcessing: {sub} | {ses} | {run}")
-        
-        # Locate Timeseries CSV
-        ts_folder_path = os.path.join(ts_root, folder)
-        ts_files = glob.glob(os.path.join(ts_folder_path, '*.csv'))
-        
-        if not ts_files:
-            print("  Skipping: No CSV found in timeseries folder.")
-            continue
+    if direct_csv_files:
+        # New behavior: Process CSV files directly from the directory
+        print(f"Found {len(direct_csv_files)} CSV files in directory.")
+        ts_items = [(None, csv_file) for csv_file in direct_csv_files]
+    else:
+        # Original behavior: Look for nested folder structure
+        # The structure is .../cleaned_timeseries/_split_name_.../*.csv
+        ts_folders = [d for d in os.listdir(ts_root) if os.path.isdir(os.path.join(ts_root, d)) and d.startswith('_split_name_')]
+        print(f"Found {len(ts_folders)} potential scans in nested folders.")
+        ts_items = [(folder, None) for folder in ts_folders]
+    
+    for folder, direct_csv in ts_items:
+        if direct_csv:
+            # Extract BIDS info from the CSV filename
+            csv_basename = os.path.basename(direct_csv)
+            sub, ses, run = parse_bids_from_folder(csv_basename)
+            print(f"\nProcessing: {sub} | {ses} | {run}")
+            ts_path = direct_csv
+        else:
+            # Extract BIDS info from folder name
+            sub, ses, run = parse_bids_from_folder(folder)
+            print(f"\nProcessing: {sub} | {ses} | {run}")
             
-        ts_path = ts_files[0]
+            # Locate Timeseries CSV in folder
+            ts_folder_path = os.path.join(ts_root, folder)
+            ts_files = glob.glob(os.path.join(ts_folder_path, '*.csv'))
+            
+            if not ts_files:
+                print("  Skipping: No CSV found in timeseries folder.")
+                continue
+                
+            ts_path = ts_files[0]
         
         # Locate FC Matrix CSV
         fc_path = find_matching_fc_file(fc_root, sub, ses, run)

@@ -40,6 +40,11 @@ The script looks for data in the following locations relative to `--root_dir`:
 
 It automatically pairs files based on Subject, Session, and Run IDs (e.g., `sub-01`, `ses-01`, `run-1`), handling variations in folder naming (like `dir-AP` vs `dir-PA`).
 
+**Flexible Timeseries Input:**
+The `--timeseries` flag now supports two directory structures:
+- **Direct CSV files:** Point to a directory containing CSV files directly (e.g., `sub-01_ses-01_run-1.csv`). The script will extract BIDS information from the filenames.
+- **Nested folders (legacy):** Point to a directory containing `_split_name_*` subdirectories, each with a CSV file inside.
+
 #### Arguments
 - `--root_dir`: The root folder containing the `conf_correction_out` and `analysis_out_fcmatrix` directories. This is used as the base path for finding data when `--timeseries` or `--fc_matrix` are not explicitly specified. Defaults to the current directory (`.`).
 - `--atlas`: Path to the **common** NIfTI atlas file used for all subjects.
