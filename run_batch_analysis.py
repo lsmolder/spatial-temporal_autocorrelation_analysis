@@ -62,6 +62,46 @@ def find_matching_fc_file(base_fc_dir, sub, ses, run):
     
     return found_file
 
+def sort_summary_df(df):
+    """
+    Sorts the summary DataFrame by Subject, Session (chronologically), and Run.
+    Session is expected to be in formats like "ses-6m", "ses-12m", or just "6m", "12m".
+    """
+    # Create a temporary column for session sorting
+    def extract_session_month(ses_str):
+        # Extract all digits
+        digits = re.findall(r'\d+', str(ses_str))
+        if digits:
+            # Join digits if split? Or just take the first block?
+            # Assuming format "ses-6m", "6m" -> returns 6
+            # If "ses-01", returns 1
+            return int(digits[0])
+        else:
+            # If no digits, use a high value to put it at the end, or -1 for beginning?
+            # Let's use infinity to push non-numeric sessions to the end, or sort alphabetically
+            return float('inf')
+
+    df['_ses_sort'] = df['Session'].apply(extract_session_month)
+
+    # Sort
+    # Subject: ascending
+    # _ses_sort: ascending (numerical)
+    # Run: ascending (numerical if possible, else string)
+
+    # Helper for run sorting (extract number)
+    def extract_run_num(run_str):
+        digits = re.findall(r'\d+', str(run_str))
+        return int(digits[0]) if digits else float('inf')
+
+    df['_run_sort'] = df['Run'].apply(extract_run_num)
+
+    df_sorted = df.sort_values(by=['Subject', '_ses_sort', '_run_sort'])
+
+    # Drop temp columns
+    df_sorted = df_sorted.drop(columns=['_ses_sort', '_run_sort'])
+
+    return df_sorted
+
 def main():
     parser = argparse.ArgumentParser(description="Batch Process TA and SA for Multiple Subjects")
     parser.add_argument("--root_dir", default=".", help="Root directory containing conf_correction_out and analysis_out_fcmatrix subdirectories (used as base path when --timeseries or --fc_matrix are not specified)")
@@ -70,6 +110,12 @@ def main():
     parser.add_argument("--timeseries", default=None, help="Path to timeseries directory (overrides default path within root_dir)")
     parser.add_argument("--fc_matrix", default=None, help="Path to FC matrix directory (overrides default path within root_dir)")
     
+    # Exclusion Arguments
+    parser.add_argument("--exclude_subjects", nargs='+', default=[], help="List of Subject IDs to exclude (e.g., sub-01 sub-02)")
+    parser.add_argument("--exclude_sessions", nargs='+', default=[], help="List of Session IDs to exclude (e.g., ses-6m)")
+    parser.add_argument("--exclude_runs", nargs='+', default=[], help="List of Run IDs to exclude (e.g., run-1)")
+    parser.add_argument("--exclude_scans", nargs='+', default=[], help="List of full Scan IDs to exclude (e.g., sub-01_ses-6m_run-1)")
+
     args = parser.parse_args()
     
     # Define Input Roots
@@ -124,22 +170,37 @@ def main():
             # Remove .csv extension before parsing to avoid interfering with regex
             csv_name = os.path.splitext(csv_basename)[0]
             sub, ses, run = parse_bids_from_folder(csv_name)
-            print(f"\nProcessing: {sub} | {ses} | {run}")
             ts_path = direct_csv
         else:
             # Extract BIDS info from folder name
             sub, ses, run = parse_bids_from_folder(folder)
-            print(f"\nProcessing: {sub} | {ses} | {run}")
             
             # Locate Timeseries CSV in folder
             ts_folder_path = os.path.join(ts_root, folder)
             ts_files = glob.glob(os.path.join(ts_folder_path, '*.csv'))
             
             if not ts_files:
-                print("  Skipping: No CSV found in timeseries folder.")
                 continue
                 
             ts_path = ts_files[0]
+
+        # Construct Scan ID
+        scan_id = f"{sub}_{ses}_{run}"
+        print(f"\nProcessing candidate: {sub} | {ses} | {run}")
+
+        # --- EXCLUSION CHECK ---
+        if sub in args.exclude_subjects:
+            print(f"  Skipping: Subject {sub} is excluded.")
+            continue
+        if ses in args.exclude_sessions:
+            print(f"  Skipping: Session {ses} is excluded.")
+            continue
+        if run in args.exclude_runs:
+            print(f"  Skipping: Run {run} is excluded.")
+            continue
+        if scan_id in args.exclude_scans:
+            print(f"  Skipping: Scan {scan_id} is excluded.")
+            continue
         
         # Locate FC Matrix CSV
         fc_path = find_matching_fc_file(fc_root, sub, ses, run)
@@ -152,26 +213,15 @@ def main():
         print(f"  FC: {os.path.basename(fc_path)}")
         
         # Create output subdirectory for this scan
-        scan_id = f"{sub}_{ses}_{run}"
         scan_out_dir = os.path.join(args.output_dir, scan_id)
         if not os.path.exists(scan_out_dir):
             os.makedirs(scan_out_dir)
             
         try:
             # --- RUN ANALYSIS ---
-            # We call the functions directly instead of subprocess for speed/efficiency
-            # 1. Validate
-            # Note: We reuse the loaded atlas data to avoid reloading 100 times
-            # However, `load_and_validate_data` currently loads the atlas inside it.
-            # To avoid refactoring the main script too much, we will just call load_and_validate_data
-            # but pass the path. It's slightly inefficient but safer to reuse tested code.
-            # Actually, let's optimize slightly: if we look at `load_and_validate_data`
-            # it returns atlas_data. 
-            # We can just run it as is.
-            
             fc_matrix, ts_data, region_labels, _, _ = load_and_validate_data(fc_path, ts_path, args.atlas)
             
-            # 2. Extract Centroids (We can cache this technically, but it's fast)
+            # 2. Extract Centroids
             centroids = extract_centroids(region_labels, atlas_data, atlas_affine)
             
             # 3. Calculate TA
@@ -218,6 +268,10 @@ def main():
         print("\nWriting Master Summary...")
         summary_df = pd.DataFrame(summary_results)
         
+        # Apply Sorting
+        print("  Sorting results by Subject, Session (chronological), and Run...")
+        summary_df = sort_summary_df(summary_df)
+
         # Reorder columns nicely
         cols = ['Subject', 'Session', 'Run', 'Global_TA', 'SA_Lambda', 'SA_Infinity']
         summary_df = summary_df[cols]
