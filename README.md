@@ -57,6 +57,50 @@ The `--timeseries` flag now supports two directory structures:
     - Columns: `Subject`, `Session`, `Run`, `Global_TA`, `SA_Lambda`, `SA_Infinity`.
 2.  **Subdirectories**: Inside the output directory, a folder is created for each scan (e.g., `sub-01_ses-01_run-1/`) containing the detailed per-region TA and curve fit data.
 
+---
+
+## Atlas Registration: Allen Brain Atlas → DSURQE
+
+`register_allen_to_dsurqe.py` registers the scalable Allen Brain Atlas (`zoaverage_template_50.nii`) to the DSURQE atlas template (`DSURQE_40micron_average.nii.gz`) used in rabies preprocessing, using ANTs with a three-stage strategy: **Rigid → Affine → SyN**.
+
+### Requirements
+
+- [ANTs](https://github.com/ANTsX/ANTs) must be installed and `antsRegistration` available on your `PATH` (or `$PATH` on Unix systems).
+
+### Usage
+
+```bash
+python register_allen_to_dsurqe.py \
+    --fixed DSURQE_40micron_average.nii.gz \
+    --moving zoaverage_template_50.nii \
+    --output_prefix full_registration_
+```
+
+#### Arguments
+
+| Argument | Default | Description |
+|---|---|---|
+| `--fixed` | `DSURQE_40micron_average.nii.gz` | Path to the fixed image (DSURQE template). |
+| `--moving` | `zoaverage_template_50.nii` | Path to the moving image (Allen Brain Atlas template). |
+| `--output_prefix` | `full_registration_` | Prefix for all output transform and warped image files. |
+
+### Outputs
+
+- `<output_prefix>Warped.nii.gz` – Allen Brain Atlas warped into DSURQE space.
+- `<output_prefix>0GenericAffine.mat` – Rigid + Affine transform.
+- `<output_prefix>1Warp.nii.gz` – SyN forward warp field.
+- `<output_prefix>1InverseWarp.nii.gz` – SyN inverse warp field.
+
+### Registration Strategy
+
+| Stage | Transform | Metric | Convergence | Shrink Factors | Smoothing |
+|---|---|---|---|---|---|
+| 1 | Rigid[0.1] | MI (weight 0.25) | 1000×500×250×100, tol 1e-6 | 8×4×2×1 | 3×2×1×0 vox |
+| 2 | Affine[0.1] | CC (radius 4) | 1000×500×250×100, tol 1e-6 | 8×4×2×1 | 3×2×1×0 vox |
+| 3 | SyN[0.1,3,0] | CC (radius 4) | 100×70×50×20, tol 1e-6 | 8×4×2×1 | 3×2×1×0 vox |
+
+---
+
 ## Methodology
 
 ### Temporal Autocorrelation (TA)
