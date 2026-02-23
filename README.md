@@ -52,8 +52,16 @@ The `--timeseries` flag now supports two directory structures:
 - `--timeseries`: (Optional) Path to timeseries directory. If not provided, defaults to `<root_dir>/conf_correction_out/confound_correction_datasink/cleaned_timeseries/`.
 - `--fc_matrix`: (Optional) Path to FC matrix directory. If not provided, defaults to `<root_dir>/analysis_out_fcmatrix`.
 
+#### Exclusion Options
+You can exclude specific data from processing using the following flags:
+- `--exclude_subjects`: List of subject IDs to exclude (e.g., `sub-01 sub-02`).
+- `--exclude_sessions`: List of session IDs to exclude (e.g., `ses-6m`).
+- `--exclude_runs`: List of run IDs to exclude (e.g., `run-1`).
+- `--exclude_scans`: List of full scan IDs to exclude (e.g., `sub-01_ses-6m_run-1`).
+
 #### Batch Outputs
 1.  **`all_subjects_autocorrelation.csv`**: A master CSV containing results for all scans.
+    - **Sorting:** Results are sorted by Subject, then Session (chronologically by age, e.g., 6m < 12m), and then Run (numerically).
     - Columns: `Subject`, `Session`, `Run`, `Global_TA`, `SA_Lambda`, `SA_Infinity`.
 2.  **Subdirectories**: Inside the output directory, a folder is created for each scan (e.g., `sub-01_ses-01_run-1/`) containing the detailed per-region TA and curve fit data.
 
