@@ -27,40 +27,44 @@ def parse_bids_from_folder(folder_name):
 def find_matching_fc_file(base_fc_dir, sub, ses, run):
     """
     Searches for the corresponding FC matrix file.
-    It ignores the 'dir-AP' vs 'dir-PA' difference by using wildcards or regex.
+    Tries multiple directory structures:
+    1. Nested (legacy): .../analysis_main_wf/analysis_wf/_split_name_[ID_BLOCK]/FC_matrix/*.csv
+    2. Flat/Direct:     .../[ID_BLOCK]*BOLD/fc_matrix.csv (or similar)
     """
-    # Pattern to look for in the FC directory
-    # Structure: .../analysis_main_wf/analysis_wf/_split_name_[ID_BLOCK]/FC_matrix/*.csv
-    
-    # We construct a regex pattern that matches the critical components
-    # The folder name starts with _split_name_
-    # Contains sub, ses, run
-    # Might contain dir-AP or dir-PA (or other things)
-    
-    search_root = os.path.join(base_fc_dir, 'analysis_main_wf', 'analysis_wf')
-    
-    if not os.path.exists(search_root):
-        print(f"  Warning: FC search root not found: {search_root}")
-        return None
-        
-    # List all directories in the analysis root
-    potential_dirs = [d for d in os.listdir(search_root) if os.path.isdir(os.path.join(search_root, d))]
-    
     found_file = None
+
+    # --- STRATEGY 1: Nested Structure (Legacy) ---
+    search_root_nested = os.path.join(base_fc_dir, 'analysis_main_wf', 'analysis_wf')
+    if os.path.exists(search_root_nested):
+        potential_dirs = [d for d in os.listdir(search_root_nested) if os.path.isdir(os.path.join(search_root_nested, d))]
+        for d in potential_dirs:
+            if sub in d and ses in d and run in d:
+                fc_folder = os.path.join(search_root_nested, d, 'FC_matrix')
+                if os.path.exists(fc_folder):
+                    csv_files = glob.glob(os.path.join(fc_folder, '*.csv'))
+                    if csv_files:
+                        return csv_files[0]
+
+    # --- STRATEGY 2: Flat/Direct Structure (User Requested) ---
+    # Structure: {fc_matrix}/{subject_id, ses-, and run-id*BOLD}/*fc_matrix.csv
+    # e.g., sub-01_ses-6m_run-1_BOLD/something_fc_matrix.csv
     
-    for d in potential_dirs:
-        # Check if this directory contains our subject, session, and run
+    # List all directories directly under base_fc_dir
+    potential_dirs_flat = [d for d in os.listdir(base_fc_dir) if os.path.isdir(os.path.join(base_fc_dir, d))]
+
+    for d in potential_dirs_flat:
+        # Check if folder name contains all BIDS components
         if sub in d and ses in d and run in d:
-            # Found a candidate folder!
-            # Now look for the CSV inside FC_matrix/
-            fc_folder = os.path.join(search_root, d, 'FC_matrix')
-            if os.path.exists(fc_folder):
-                csv_files = glob.glob(os.path.join(fc_folder, '*.csv'))
-                if csv_files:
-                    found_file = csv_files[0] # Take the first one found
-                    break
-    
-    return found_file
+            # Check for BOLD suffix (case-insensitive usually good, but user said BOLD)
+            if 'bold' in d.lower():
+                 # Search for FC matrix CSV inside this folder
+                 # User specified: {fc_matrix}/{subject_id, ses-, and run-id*BOLD}/*fc_matrix.csv
+                 scan_dir = os.path.join(base_fc_dir, d)
+                 csv_files = glob.glob(os.path.join(scan_dir, '*fc_matrix.csv'))
+                 if csv_files:
+                     return csv_files[0]
+
+    return None
 
 def sort_summary_df(df):
     """
