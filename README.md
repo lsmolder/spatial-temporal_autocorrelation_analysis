@@ -51,6 +51,9 @@ The `--timeseries` flag now supports two directory structures:
 - `--output_dir`: Directory where the master summary and individual results will be saved.
 - `--timeseries`: (Optional) Path to timeseries directory. If not provided, defaults to `<root_dir>/conf_correction_out/confound_correction_datasink/cleaned_timeseries/`.
 - `--fc_matrix`: (Optional) Path to FC matrix directory. If not provided, defaults to `<root_dir>/analysis_out_fcmatrix`.
+    - **Structure:** Supports two formats:
+        1.  **Nested (Legacy):** `<fc_matrix_root>/analysis_main_wf/analysis_wf/_split_name_[ID_BLOCK]/FC_matrix/*.csv`
+        2.  **Flat (Recommended):** `<fc_matrix_root>/[ID_BLOCK]_BOLD/*fc_matrix.csv` (e.g., `sub-01_ses-6m_run-1_BOLD/sub-01_ses-6m_run-1_fc_matrix.csv`).
 
 #### Exclusion Options
 You can exclude specific data from processing using the following flags:
