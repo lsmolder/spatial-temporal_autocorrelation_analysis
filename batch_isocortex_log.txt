@@ -1,0 +1,1310 @@
+Loading isocortex label definitions from hierarchy...
+  748 isocortical label values identified
+
+============================================================
+COHORT: cohort_100
+============================================================
+  Atlas: amba_ccf_v3_annotation_n98_original2DSUQRE_space_100s.nii.gz
+  Atlas shape: (80, 38, 61)
+  Found 36 timeseries files
+
+  Processing: sub-AS160M1 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M1 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M1 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M1 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M2 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M2 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M2 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M2 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M3 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M3 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M3 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M3 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M5 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M5 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M5 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS160M5 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS161M4 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS161M4 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS161M4 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS161M4 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS161M5 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS161M5 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS161M5 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS161M5 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F1 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F1 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F1 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F1 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F5 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F5 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F5 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F5 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F6 | ses-06m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F6 | ses-06m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F6 | ses-09m | run-1 → run-1
+    Skipping: no matching FC matrix found
+
+  Processing: sub-AS167F6 | ses-09m | run-2 → run-2
+    Skipping: no matching FC matrix found
+
+============================================================
+COHORT: cohort_200_AP
+============================================================
+  Atlas: amba_ccf_v3_annotation_n98_original2DSUQRE_space_200s.nii.gz
+  Atlas shape: (80, 38, 61)
+  Found 14 timeseries files
+
+  Processing: sub-AS209M4 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS209M4_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M4_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0810
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2546 mm
+  SA-inf (Asymptote): 0.0974
+    ✅  TA=0.0810  SA_lambda=0.2546  SA_inf=0.0974
+
+  Processing: sub-AS209M4 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS209M4_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M4_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0524
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2375 mm
+  SA-inf (Asymptote): 0.0473
+    ✅  TA=0.0524  SA_lambda=0.2375  SA_inf=0.0473
+
+  Processing: sub-AS209M5 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS209M5_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M5_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0981
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2436 mm
+  SA-inf (Asymptote): 0.1207
+    ✅  TA=0.0981  SA_lambda=0.2436  SA_inf=0.1207
+
+  Processing: sub-AS209M5 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS209M5_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M5_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0157
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2470 mm
+  SA-inf (Asymptote): 0.0147
+    ✅  TA=0.0157  SA_lambda=0.2470  SA_inf=0.0147
+
+  Processing: sub-AS209M7 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS209M7_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M7_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0486
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2250 mm
+  SA-inf (Asymptote): 0.0499
+    ✅  TA=0.0486  SA_lambda=0.2250  SA_inf=0.0499
+
+  Processing: sub-AS209M7 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS209M7_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M7_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0721
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2413 mm
+  SA-inf (Asymptote): 0.0764
+    ✅  TA=0.0721  SA_lambda=0.2413  SA_inf=0.0764
+
+  Processing: sub-AS210F1 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS210F1_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F1_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0397
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2875 mm
+  SA-inf (Asymptote): 0.0350
+    ✅  TA=0.0397  SA_lambda=0.2875  SA_inf=0.0350
+
+  Processing: sub-AS210F1 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS210F1_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F1_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.1127
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.1912 mm
+  SA-inf (Asymptote): 0.1859
+    ✅  TA=0.1127  SA_lambda=0.1912  SA_inf=0.1859
+
+  Processing: sub-AS210F3 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS210F3_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F3_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0141
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2520 mm
+  SA-inf (Asymptote): 0.0237
+    ✅  TA=0.0141  SA_lambda=0.2520  SA_inf=0.0237
+
+  Processing: sub-AS210F3 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS210F3_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F3_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0745
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2492 mm
+  SA-inf (Asymptote): 0.1117
+    ✅  TA=0.0745  SA_lambda=0.2492  SA_inf=0.1117
+
+  Processing: sub-AS210F4 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS210F4_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F4_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0319
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2550 mm
+  SA-inf (Asymptote): 0.0274
+    ✅  TA=0.0319  SA_lambda=0.2550  SA_inf=0.0274
+
+  Processing: sub-AS210F4 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS210F4_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F4_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0912
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2309 mm
+  SA-inf (Asymptote): 0.1511
+    ✅  TA=0.0912  SA_lambda=0.2309  SA_inf=0.1511
+
+  Processing: sub-AS210F6 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS210F6_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F6_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0227
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2665 mm
+  SA-inf (Asymptote): 0.0211
+    ✅  TA=0.0227  SA_lambda=0.2665  SA_inf=0.0211
+
+  Processing: sub-AS210F6 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS210F6_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned.csv
+    FC:  _split_name_sub-AS210F6_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0032
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2649 mm
+  SA-inf (Asymptote): 0.0124
+    ✅  TA=0.0032  SA_lambda=0.2649  SA_inf=0.0124
+
+============================================================
+COHORT: cohort_200_PA
+============================================================
+  Atlas: amba_ccf_v3_annotation_n98_original2DSUQRE_space_200s.nii.gz
+  Atlas shape: (80, 38, 61)
+  Found 14 timeseries files
+
+  Processing: sub-AS209M4 | ses-06m | dir-PA | run-2 → run-2
+    TS:  sub-AS209M4_ses-06m_task-rest_dir-PA_run-2_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M4_ses-06m_task-rest_dir-PA_run-2_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0966
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2324 mm
+  SA-inf (Asymptote): 0.1857
+    ✅  TA=0.0966  SA_lambda=0.2324  SA_inf=0.1857
+
+  Processing: sub-AS209M4 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS209M4_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M4_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0171
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2648 mm
+  SA-inf (Asymptote): 0.0145
+    ✅  TA=0.0171  SA_lambda=0.2648  SA_inf=0.0145
+
+  Processing: sub-AS209M5 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS209M5_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M5_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.1252
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2042 mm
+  SA-inf (Asymptote): 0.3112
+    ✅  TA=0.1252  SA_lambda=0.2042  SA_inf=0.3112
+
+  Processing: sub-AS209M5 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS209M5_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M5_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.1072
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2244 mm
+  SA-inf (Asymptote): 0.1271
+    ✅  TA=0.1072  SA_lambda=0.2244  SA_inf=0.1271
+
+  Processing: sub-AS209M7 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS209M7_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M7_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0833
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2465 mm
+  SA-inf (Asymptote): 0.0813
+    ✅  TA=0.0833  SA_lambda=0.2465  SA_inf=0.0813
+
+  Processing: sub-AS209M7 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS209M7_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS209M7_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0446
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2456 mm
+  SA-inf (Asymptote): 0.0408
+    ✅  TA=0.0446  SA_lambda=0.2456  SA_inf=0.0408
+
+  Processing: sub-AS210F1 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS210F1_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F1_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0249
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2814 mm
+  SA-inf (Asymptote): 0.0199
+    ✅  TA=0.0249  SA_lambda=0.2814  SA_inf=0.0199
+
+  Processing: sub-AS210F1 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS210F1_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F1_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.1015
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2135 mm
+  SA-inf (Asymptote): 0.1228
+    ✅  TA=0.1015  SA_lambda=0.2135  SA_inf=0.1228
+
+  Processing: sub-AS210F3 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS210F3_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F3_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0249
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2396 mm
+  SA-inf (Asymptote): 0.0410
+    ✅  TA=0.0249  SA_lambda=0.2396  SA_inf=0.0410
+
+  Processing: sub-AS210F3 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS210F3_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F3_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0265
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2561 mm
+  SA-inf (Asymptote): 0.0210
+    ✅  TA=0.0265  SA_lambda=0.2561  SA_inf=0.0210
+
+  Processing: sub-AS210F4 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS210F4_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F4_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0365
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2380 mm
+  SA-inf (Asymptote): 0.0593
+    ✅  TA=0.0365  SA_lambda=0.2380  SA_inf=0.0593
+
+  Processing: sub-AS210F4 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS210F4_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F4_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0911
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2692 mm
+  SA-inf (Asymptote): 0.0859
+    ✅  TA=0.0911  SA_lambda=0.2692  SA_inf=0.0859
+
+  Processing: sub-AS210F6 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS210F6_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS210F6_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0391
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2599 mm
+  SA-inf (Asymptote): 0.0540
+    ✅  TA=0.0391  SA_lambda=0.2599  SA_inf=0.0540
+
+  Processing: sub-AS210F6 | ses-09m | dir-PA | run-2 → run-2
+    TS:  sub-AS210F6_ses-09m_task-rest_dir-PA_run-2_bold_RAS_resampled_cleaned.csv
+    FC:  _split_name_sub-AS210F6_ses-09m_task-rest_dir-PA_run-2_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0274
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.3104 mm
+  SA-inf (Asymptote): 0.0377
+    ✅  TA=0.0274  SA_lambda=0.3104  SA_inf=0.0377
+
+============================================================
+COHORT: cohort_300_AP
+============================================================
+  Atlas: amba_ccf_v3_annotation_n98_original2DSUQRE_space_300-400s.nii.gz
+/cifs/schmitz_projects/mspread/luke/v_env/NIFTI_2_timeseries/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/home/UWO/lsmolder/gh_projects/spatial-temporal_autocorrelation_analysis/calculate_autocorrelation.py:153: RuntimeWarning: Mean of empty slice
+  global_ta = np.nanmean(ta_values)
+  Atlas shape: (74, 38, 56)
+  Found 18 timeseries files
+
+  Processing: sub-AS303F2 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS303F2_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS303F2_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0795
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2886 mm
+  SA-inf (Asymptote): 0.1275
+    ✅  TA=0.0795  SA_lambda=0.2886  SA_inf=0.1275
+
+  Processing: sub-AS303F2 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS303F2_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS303F2_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0681
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2731 mm
+  SA-inf (Asymptote): 0.0772
+    ✅  TA=0.0681  SA_lambda=0.2731  SA_inf=0.0772
+
+  Processing: sub-AS305M1 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS305M1_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M1_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.2352
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2559 mm
+  SA-inf (Asymptote): 0.2771
+    ✅  TA=0.2352  SA_lambda=0.2559  SA_inf=0.2771
+
+  Processing: sub-AS305M1 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS305M1_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M1_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0819
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2662 mm
+  SA-inf (Asymptote): 0.0879
+    ✅  TA=0.0819  SA_lambda=0.2662  SA_inf=0.0879
+
+  Processing: sub-AS305M2 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS305M2_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M2_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0360
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.1768 mm
+  SA-inf (Asymptote): 0.0714
+    ✅  TA=0.0360  SA_lambda=0.1768  SA_inf=0.0714
+
+  Processing: sub-AS305M2 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS305M2_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M2_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0184
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.3098 mm
+  SA-inf (Asymptote): 0.0542
+    ✅  TA=0.0184  SA_lambda=0.3098  SA_inf=0.0542
+
+  Processing: sub-AS305M3 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS305M3_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M3_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0822
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2296 mm
+  SA-inf (Asymptote): 0.1303
+    ✅  TA=0.0822  SA_lambda=0.2296  SA_inf=0.1303
+
+  Processing: sub-AS305M3 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS305M3_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M3_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0612
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2624 mm
+  SA-inf (Asymptote): 0.0668
+    ✅  TA=0.0612  SA_lambda=0.2624  SA_inf=0.0668
+
+  Processing: sub-AS306F4 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS306F4_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F4_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.1538
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2974 mm
+  SA-inf (Asymptote): 0.2355
+    ✅  TA=0.1538  SA_lambda=0.2974  SA_inf=0.2355
+
+  Processing: sub-AS306F4 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS306F4_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F4_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0236
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2756 mm
+  SA-inf (Asymptote): 0.0215
+    ✅  TA=0.0236  SA_lambda=0.2756  SA_inf=0.0215
+
+  Processing: sub-AS306F5 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS306F5_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F5_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): nan
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.0273 mm
+  SA-inf (Asymptote): -0.0000
+    ✅  TA=nan  SA_lambda=0.0273  SA_inf=-0.0000
+
+  Processing: sub-AS306F5 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS306F5_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F5_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+/cifs/schmitz_projects/mspread/luke/v_env/NIFTI_2_timeseries/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+/cifs/schmitz_projects/mspread/luke/v_env/NIFTI_2_timeseries/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0736
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2554 mm
+  SA-inf (Asymptote): 0.1684
+    ✅  TA=0.0736  SA_lambda=0.2554  SA_inf=0.1684
+
+  Processing: sub-AS306F6 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS306F6_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F6_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0769
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2378 mm
+  SA-inf (Asymptote): 0.2911
+    ✅  TA=0.0769  SA_lambda=0.2378  SA_inf=0.2911
+
+  Processing: sub-AS306F6 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS306F6_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F6_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0903
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.1872 mm
+  SA-inf (Asymptote): 0.1688
+    ✅  TA=0.0903  SA_lambda=0.1872  SA_inf=0.1688
+
+  Processing: sub-AS306F7 | ses-06m | dir-AP | run-1 → run-1
+    TS:  sub-AS306F7_ses-06m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F7_ses-06m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0573
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2563 mm
+  SA-inf (Asymptote): 0.0137
+    ✅  TA=0.0573  SA_lambda=0.2563  SA_inf=0.0137
+
+  Processing: sub-AS306F7 | ses-09m | dir-AP | run-1 → run-1
+    TS:  sub-AS306F7_ses-09m_task-rest_dir-AP_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F7_ses-09m_task-rest_dir-AP_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0201
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.1097 mm
+  SA-inf (Asymptote): -0.0002
+    ✅  TA=0.0201  SA_lambda=0.1097  SA_inf=-0.0002
+
+  Processing: sub-AS436M1 | ses-06m | dir-AP | run-1 → run-1
+    Skipping: subject excluded
+
+  Processing: sub-AS436M2 | ses-06m | dir-AP | run-1 → run-1
+    Skipping: subject excluded
+
+============================================================
+COHORT: cohort_300_PA
+============================================================
+  Atlas: amba_ccf_v3_annotation_n98_original2DSUQRE_space_300-400s.nii.gz
+  Atlas shape: (74, 38, 56)
+  Found 18 timeseries files
+
+  Processing: sub-AS303F2 | ses-06m | dir-PA | run-2 → run-2
+    TS:  sub-AS303F2_ses-06m_task-rest_dir-PA_run-2_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS303F2_ses-06m_task-rest_dir-PA_run-2_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0744
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2850 mm
+  SA-inf (Asymptote): 0.0783
+    ✅  TA=0.0744  SA_lambda=0.2850  SA_inf=0.0783
+
+  Processing: sub-AS303F2 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS303F2_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS303F2_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0593
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2405 mm
+  SA-inf (Asymptote): 0.0692
+    ✅  TA=0.0593  SA_lambda=0.2405  SA_inf=0.0692
+
+  Processing: sub-AS305M1 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS305M1_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M1_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0861
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2389 mm
+  SA-inf (Asymptote): 0.2407
+    ✅  TA=0.0861  SA_lambda=0.2389  SA_inf=0.2407
+
+  Processing: sub-AS305M1 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS305M1_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M1_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0879
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2927 mm
+  SA-inf (Asymptote): 0.0880
+    ✅  TA=0.0879  SA_lambda=0.2927  SA_inf=0.0880
+
+  Processing: sub-AS305M2 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS305M2_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M2_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0589
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.1790 mm
+  SA-inf (Asymptote): 0.0482
+    ✅  TA=0.0589  SA_lambda=0.1790  SA_inf=0.0482
+
+  Processing: sub-AS305M2 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS305M2_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M2_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0591
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2546 mm
+  SA-inf (Asymptote): 0.1099
+    ✅  TA=0.0591  SA_lambda=0.2546  SA_inf=0.1099
+
+  Processing: sub-AS305M3 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS305M3_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+/cifs/schmitz_projects/mspread/luke/v_env/NIFTI_2_timeseries/lib/python3.10/site-packages/numpy/lib/_function_base_impl.py:3045: RuntimeWarning: invalid value encountered in divide
+  c /= stddev[:, None]
+    FC:  _split_name_sub-AS305M3_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0656
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2648 mm
+  SA-inf (Asymptote): 0.0499
+    ✅  TA=0.0656  SA_lambda=0.2648  SA_inf=0.0499
+
+  Processing: sub-AS305M3 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS305M3_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS305M3_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0731
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2258 mm
+  SA-inf (Asymptote): 0.1843
+    ✅  TA=0.0731  SA_lambda=0.2258  SA_inf=0.1843
+
+  Processing: sub-AS306F4 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS306F4_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F4_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0409
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.3050 mm
+  SA-inf (Asymptote): 0.0380
+    ✅  TA=0.0409  SA_lambda=0.3050  SA_inf=0.0380
+
+  Processing: sub-AS306F4 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS306F4_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F4_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0721
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.3031 mm
+  SA-inf (Asymptote): 0.1848
+    ✅  TA=0.0721  SA_lambda=0.3031  SA_inf=0.1848
+
+  Processing: sub-AS306F5 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS306F5_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F5_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0341
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2605 mm
+  SA-inf (Asymptote): 0.0751
+    ✅  TA=0.0341  SA_lambda=0.2605  SA_inf=0.0751
+
+  Processing: sub-AS306F5 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS306F5_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F5_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0783
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.3887 mm
+  SA-inf (Asymptote): 0.1188
+    ✅  TA=0.0783  SA_lambda=0.3887  SA_inf=0.1188
+
+  Processing: sub-AS306F6 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS306F6_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F6_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0904
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2760 mm
+  SA-inf (Asymptote): 0.2405
+    ✅  TA=0.0904  SA_lambda=0.2760  SA_inf=0.2405
+
+  Processing: sub-AS306F6 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS306F6_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F6_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0186
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2256 mm
+  SA-inf (Asymptote): 0.2424
+    ✅  TA=0.0186  SA_lambda=0.2256  SA_inf=0.2424
+
+  Processing: sub-AS306F7 | ses-06m | dir-PA | run-1 → run-2
+    TS:  sub-AS306F7_ses-06m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F7_ses-06m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): 0.0655
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.2255 mm
+  SA-inf (Asymptote): 0.0789
+    ✅  TA=0.0655  SA_lambda=0.2255  SA_inf=0.0789
+
+  Processing: sub-AS306F7 | ses-09m | dir-PA | run-1 → run-2
+    TS:  sub-AS306F7_ses-09m_task-rest_dir-PA_run-1_bold_RAS_resampled_cleaned_timeseries.csv
+    FC:  _split_name_sub-AS306F7_ses-09m_task-rest_dir-PA_run-1_bold_fc_matrix.csv
+    Regions after isocortex filter: 48
+
+Extracting region centroids...
+
+Calculating Temporal Autocorrelation (TA)...
+  Global TA (Mean Lag-1 Autocorr): -0.0262
+
+Calculating Spatial Autocorrelation (SA)...
+  Computing pairwise distances...
+  Binning data by distance (1mm bins)...
+  Data points for fitting: 10 bins
+  Fitting exponential decay model...
+  SA-lambda (Length Scale): 0.1752 mm
+  SA-inf (Asymptote): 0.0021
+    ✅  TA=-0.0262  SA_lambda=0.1752  SA_inf=0.0021
+
+  Processing: sub-AS436M1 | ses-06m | dir-PA | run-1 → run-2
+    Skipping: subject excluded
+
+  Processing: sub-AS436M2 | ses-06m | dir-PA | run-1 → run-2
+    Skipping: subject excluded
+
+Writing master summary...
+Done! Results saved to: /nfs/khan/trainees/lsmolder/mouse_lecanemab/analysis/iso+subcortex_analysis_test/isocortex/all_subjects_isocortex_autocorrelation.csv
