@@ -190,7 +190,7 @@ def fit_exp_decay(bin_centers, group_means):
 
 def plot_groups(binned_df, bin_centers, group_assignments, group_order,
                 group_by, colors, output_path, title, xlabel, ylabel,
-                figsize, point_size, show_fit, show_sem, filter_desc):
+                figsize, point_size, show_fit, show_sem, filter_desc, xlim=None):
     """
     binned_df      : DataFrame with Subject, bin_center, mean_fc
     bin_centers    : array of bin centre distances
@@ -275,6 +275,9 @@ def plot_groups(binned_df, bin_centers, group_assignments, group_order,
     ax.spines['top'].set_visible(False)
     ax.spines['right'].set_visible(False)
 
+    if xlim:
+        ax.set_xlim(xlim[0], xlim[1])
+
     fig.tight_layout()
 
     # Save both PNG and PDF
@@ -335,6 +338,9 @@ def main():
     parser.add_argument('--cohort_mode', action='store_true',
                         help='Batch dir contains cohort subfolders '
                              '(cohort_100 etc.) — recurse into them')
+    parser.add_argument('--xlim', nargs=2, type=float, default=None,
+                        metavar=('XMIN', 'XMAX'),
+                        help='Optional: lower and upper bounds for the x-axis (e.g. --xlim 0 50)')
     args = parser.parse_args()
 
     os.makedirs(os.path.dirname(os.path.abspath(args.output)), exist_ok=True)
@@ -450,6 +456,7 @@ def main():
         show_fit=not args.no_fit,
         show_sem=not args.no_sem,
         filter_desc=filter_desc,
+        xlim=args.xlim,
     )
 
 
