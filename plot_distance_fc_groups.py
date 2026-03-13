@@ -136,7 +136,7 @@ def load_and_bin_curves(records, n_bins=20):
     if not loaded:
         raise ValueError("No valid sa_curve_fit.csv files could be loaded.")
 
-    d_min = np.min(all_dists)
+    d_min = 0.0
     d_max = np.max(all_dists)
     bin_edges = np.linspace(d_min, d_max, n_bins + 1)
     bin_centers = (bin_edges[:-1] + bin_edges[1:]) / 2.0
@@ -159,29 +159,28 @@ def load_and_bin_curves(records, n_bins=20):
     return pd.DataFrame(rows), bin_centers
 
 
-def exp_decay(x, a, lam, c):
-    """Exponential decay: a * exp(-x / lam) + c"""
-    return a * np.exp(-x / lam) + c
+def exp_decay_fixed_yint(x, lam, c):
+    """Exponential decay fixed at y=1 when x=0: (1-c) * exp(-x / lam) + c"""
+    return (1 - c) * np.exp(-x / lam) + c
 
 
 def fit_exp_decay(bin_centers, group_means):
     """Fit exponential decay to group mean curve. Returns fitted y values."""
     try:
-        a0   = group_means[0] - group_means[-1]
-        lam0 = (bin_centers[-1] - bin_centers[0]) / 3.0
+        lam0 = (bin_centers[-1] - 0.0) / 3.0
         c0   = group_means[-1]
         popt, _ = curve_fit(
-            exp_decay, bin_centers, group_means,
-            p0=[a0, lam0, c0],
-            bounds=([-2, 0.001, -2], [2, 500, 2]),
+            exp_decay_fixed_yint, bin_centers, group_means,
+            p0=[lam0, c0],
+            bounds=([0.001, -2], [500, 2]),
             maxfev=10000
         )
-        x_fine = np.linspace(bin_centers[0], bin_centers[-1], 300)
-        return x_fine, exp_decay(x_fine, *popt)
+        x_fine = np.linspace(0.0, bin_centers[-1], 300)
+        return x_fine, exp_decay_fixed_yint(x_fine, *popt)
     except Exception:
         # Fall back to linear
         m, b = np.polyfit(bin_centers, group_means, 1)
-        x_fine = np.linspace(bin_centers[0], bin_centers[-1], 300)
+        x_fine = np.linspace(0.0, bin_centers[-1], 300)
         return x_fine, m * x_fine + b
 
 
